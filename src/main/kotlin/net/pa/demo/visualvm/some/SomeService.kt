@@ -14,8 +14,8 @@ class SomeService {
         val cls = SomeClass(LOOP_COUNT)
         logger.info("initialized!")
 
-        val after = cls.list.map {
-            it.plus(cls.someMethod())
+        val after = cls.collection.map {
+            cls.someMethod(it)
         }
 
         logger.info("Done! ( %,d count)".format(after.size))
