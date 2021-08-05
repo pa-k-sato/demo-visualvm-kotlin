@@ -10,7 +10,8 @@ class Application(
     private val service: SomeService
 ) : CommandLineRunner {
     override fun run(vararg args: String?) {
-        service.doWithForLoop()
+        service.doAsList()
+//        service.doAsSequence()
     }
 }
 

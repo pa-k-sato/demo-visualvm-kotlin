@@ -10,7 +10,7 @@ private const val LOOP_COUNT = 9_999_999
 class SomeService {
     val logger: Logger = LoggerFactory.getLogger(this.javaClass)
 
-    fun doWithForLoop() {
+    fun doAsList() {
         val cls = SomeClass(LOOP_COUNT)
         logger.info("initialized!")
 
@@ -18,6 +18,19 @@ class SomeService {
             it.plus(cls.someMethod())
         }
 
+        logger.info("Done! map loop")
         logger.info("Done! ( %,d count)".format(after.size))
+    }
+
+    fun doAsSequence() {
+        val cls = SomeClass(LOOP_COUNT)
+        logger.info("initialized!")
+
+        val after = cls.sequence.map {
+            it.plus(cls.someMethod())
+        }
+
+        logger.info("Done! map loop")
+        logger.info("Done! ( %,d count)".format(after.toList().size))
     }
 }
