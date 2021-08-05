@@ -15,7 +15,7 @@ class SomeClassTest {
                 "000000003",
                 "000000004"
             ),
-            sut.collection
+            sut.list
         )
     }
 
@@ -28,13 +28,13 @@ class SomeClassTest {
                 "000000001",
                 "000000002"
             ),
-            sut.collection
+            sut.list
         )
     }
 
     @Test
     fun testSomeMethod() {
         val sut = SomeClass()
-        assertEquals("1 test", sut.someMethod("1"))
+        assertEquals("test", sut.someMethod())
     }
 }
