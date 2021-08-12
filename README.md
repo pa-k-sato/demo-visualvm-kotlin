@@ -11,3 +11,6 @@ kotlin で作ったものを visualvm でパフォーマンス計測してみる
 - 遅延評価の速さも測りたい
 - sequence あたりの速さも測りたい
 - 結果を書くときに端末のスペックも書いておきたい
+
+## usage
+こんな感じ`./gradlew bootRun --args='--target=list'`
