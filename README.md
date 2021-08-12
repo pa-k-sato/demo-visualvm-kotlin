@@ -14,3 +14,5 @@ kotlin で作ったものを visualvm でパフォーマンス計測してみる
 
 ## usage
 こんな感じ`./gradlew bootRun --args='--target=list'`
+
+`./gradlew bootRun`すると usage を出力するようになっている
