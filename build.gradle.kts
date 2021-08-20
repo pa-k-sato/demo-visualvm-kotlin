@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.springframework.boot.gradle.tasks.run.BootRun
 
 plugins {
 	id("org.springframework.boot") version "2.5.2"
@@ -33,4 +34,10 @@ tasks.withType<KotlinCompile> {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
+}
+
+// 覚書
+tasks.register("helloWorld") {
+    group = "hello"
+    println("hello world!")
 }
