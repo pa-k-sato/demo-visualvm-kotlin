@@ -21,3 +21,16 @@ kotlin で作ったものを visualvm でパフォーマンス計測してみる
 - [ ] gradle task として実行できる
     - https://stackoverflow.com/a/33429107
     - https://stackoverflow.com/a/36925752
+
+## やっていること
+引数に応じて下記の処理をする
+
+### --target=list
+1. 9,999,999 件の`List`を作る
+2. 作った`List`をループして少し加工した新しい'List`を作る
+
+### --target=sequence
+1. 9,999,999 件の`List`を作る
+2. 作った`List`を'Sequence`に変換する
+3. 作った`Sequence`をループして少し加工した新しい'Sequence`を作る
+4. 新しい`Sequence`を`List`に変換する
