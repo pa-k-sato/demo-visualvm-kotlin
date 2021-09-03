@@ -27,7 +27,7 @@ class SomeService {
     fun doAsSequence() {
         waitAMinute()
 
-        val cls = SomeClass(LOOP_COUNT)
+        val cls = SomeSequenceClass(LOOP_COUNT)
         logger.info("initialized! with sequence")
 
         val after = cls.sequence.map {
@@ -51,10 +51,10 @@ class SomeService {
 
     val messageTemplate = "今のうちにVisualVMを起動してこのプロセスをクリック（あと%s秒）"
     private fun Int.toRemindMessage(): String = messageTemplate.format(this.millToSecond().toString())
-    private fun Int.millToSecond(): Int = (this / 1000).toInt()
+    private fun Int.millToSecond(): Int = (this / 1000)
 
     private class WaitSetting(
-        val interval: Int = 10_000,
+        val interval: Int = 5_000,
         remindCount: Int = 3
     ) {
         val start: Int = remindCount * interval

@@ -6,3 +6,14 @@ class SomeClass(listSize: Int = 5) {
 
     fun someMethod() = "test"
 }
+
+class SomeSequenceClass(size: Int = 5) {
+    private var counter = size
+
+    val sequence = generateSequence {
+        (counter--).takeIf { it > 0 }
+    }.map {it.toString().padStart(9, '0')
+    }
+
+    fun someMethod() = "test"
+}

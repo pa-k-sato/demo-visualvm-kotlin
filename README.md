@@ -30,7 +30,6 @@ kotlin で作ったものを visualvm でパフォーマンス計測してみる
 2. 作った`List`をループして少し加工した新しい'List`を作る
 
 ### --target=sequence
-1. 9,999,999 件の`List`を作る
-2. 作った`List`を'Sequence`に変換する
-3. 作った`Sequence`をループして少し加工した新しい'Sequence`を作る
-4. 新しい`Sequence`を`List`に変換する
+1. 9,999,999 件の`Sequence`を作る
+2. 作った`Sequence`をループして少し加工した新しい'Sequence`を作る
+3. 新しい`Sequence`を`List`に変換する
